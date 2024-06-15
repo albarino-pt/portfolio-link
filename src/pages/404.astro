@@ -1,27 +1,3 @@
----
-import Card from "../components/card.astro";
-import Chip from "../components/chip.astro";
-
-// Put all your links here
-const links: Link[] = [
-  {
-    desc: "My work", // The text that will be rendered
-    link: "albarino.pt", // The link
-    icon: "fa-solid fa-briefcase", // An icon from Font Awesome: https://fontawesome.com/search?o=r&m=free
-  },
-  {
-    desc: "Buy me a Pizza",
-    link: "buymeacoffee.com/the_kanlord",
-    icon: "fa-solid fa-pizza-slice",
-  },
-  {
-    desc: "Support",
-    link: "link.albarino.pt/support",
-    icon: "fa-solid fa-laptop-medical",
-  },
-];
----
-
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -62,35 +38,9 @@ const links: Link[] = [
     class="bg-[url('/fundolink.png')] bg-cover bg-center flex justify-center items-center w-screen h-screen font-[Geist] text-white"
   >
     <main class="w-[80%] flex flex-col gap-8">
-      <img
-        src="\avatar-01.png"
-        alt="Profile Pic"
-        class="object-scale-down h-48 w-full"
-      />
+      <h1 class="md:text-6xl text-4xl font-black text-center">404</h1>
 
-      <h1 class="md:text-6xl text-4xl font-black text-center">The KanLord</h1>
-
-      <div class="grid justify-center gap-4">
-        {
-          links.map(({ desc, link, icon }) => {
-            return <Card {desc} {link} {icon} />;
-          })
-        }
-      </div>
-
-      <div class="flex justify-center gap-8">
-        <!-- Put some social links who have a definitive icon here: -->
-        <Chip link="facebook.com/TheKanLord/" icon="fa-brands fa-facebook" />
-        <Chip link="instagram.com/the_kanlord" icon="fa-brands fa-instagram" />
-        <Chip link="x.com/The_KanLord" icon="fa-brands fa-x-twitter" />
-        <Chip link="snapchat.com/add/kanlord" icon="fa-brands fa-snapchat" />
-        <Chip
-          link="linkedin.com/in/francisco-albarino"
-          icon="fa-brands fa-linkedin"
-        />
-      </div>
-
-      <p class="text-center mx-auto">Hello Human</p>
+      <p class="text-center mx-auto">Hello Human something is not right</p>
     </main>
   </body>
 </html>
