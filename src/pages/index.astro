@@ -11,9 +11,9 @@ const links: Link[] = [
     icon: "fa-solid fa-briefcase", // An icon from Font Awesome: https://fontawesome.com/search?o=r&m=free
   },
   {
-    desc: "Buy me a Pizza",
+    desc: "Buy me a Coffe",
     link: "https://buymeacoffee.com/the_kanlord",
-    icon: "fa-solid fa-pizza-slice",
+    icon: "fa-solid fa-mug-hot",
   },
   {
     desc: "Support",
@@ -57,16 +57,35 @@ const links: Link[] = [
         src: url(/Geist.ttf);
         font-display: swap;
       }
+      @keyframes glow {
+        0%,
+        100% {
+          box-shadow:
+            0 0 15px rgba(255, 255, 255, 0.1),
+            0 0 30px rgba(255, 255, 255, 0.1),
+            0 0 45px rgba(255, 255, 255, 0.1);
+        }
+        50% {
+          box-shadow:
+            0 0 20px rgba(255, 255, 255, 0.3),
+            0 0 40px rgba(255, 255, 255, 0.3),
+            0 0 60px rgba(255, 255, 255, 0.3);
+        }
+      }
+
+      .glow {
+        animation: glow 5s infinite alternate;
+      }
     </style>
   </head>
   <body
     class="bg-[url('/fundolink.jpg')] bg-cover bg-center flex justify-center items-center w-screen h-screen font-[Geist] text-white"
   >
-    <main class="w-[80%] flex flex-col gap-8">
+    <main class="w-[80%] flex flex-col gap-8 items-center">
       <img
         src="avatar-01.png"
         alt="Profile Pic"
-        class="object-scale-down h-48 w-full"
+        class="object-scale-down h-48 w-48 glow rounded-full"
       />
 
       <h1 class="md:text-6xl text-4xl font-black text-center">The KanLord</h1>
